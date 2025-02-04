@@ -1,13 +1,13 @@
-# Node.js dependencies
-node_modules/
+.DS_Store
+node_modules
+/dist
 
-# Production build output
-/dist/
+.htaccess
 
-/public/js/app.js
+composer.phar
 
-# Environment variables
-.env
+
+# local env files
 .env.local
 .env.*.local
 
@@ -15,13 +15,11 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# OS-specific files
-.DS_Store
+pnpm-debug.log*
 
 # Editor directories and files
-.idea/
-.vscode/
+.idea
+.vscode
 *.suo
 *.ntvs*
 *.njsproj
