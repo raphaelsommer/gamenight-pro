@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Game Session</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="create_game.html" class="nav-link">Create Game</a>
+    <a href="players.html" class="nav-link">Players</a>
+    <a href="scoreboard.html" class="nav-link">Scoreboard</a>
+  </nav>
+  <div class="container">
+    <h1>Create Game Session</h1>
+    <form id="createGameForm">
+      <div class="form-group">
+        <label for="gameType">Game Type</label>
+        <select id="gameType" name="game_type_id" required></select>
+      </div>
+      <div class="form-group">
+        <label for="gameName">Session Name</label>
+        <input type="text" id="gameName" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="gameDate">Game Date</label>
+        <input type="date" id="gameDate" name="game_date" required>
+      </div>
+      <button type="submit">Create Game Session</button>
+    </form>
+    <div id="createGameMessage"></div>
+
+    <!-- Round Management Section -->
+    <div id="roundSection" style="display:none; margin-top:2rem;">
+      
+      <!-- Round Indicator -->
+      <div id="roundIndicator" style="font-weight:bold; margin-bottom:1rem;"></div>
+      
+      <!-- Start New Round -->
+      <button id="startRound">Start New Round</button>
+      
+      <!-- Team Setup Section -->
+      <div id="teamSetup" style="display:none; margin-top:1rem;">
+        <h3>Team Setup</h3>
+        <div class="form-group">
+          <label for="teamCount">Number of Teams:</label>
+          <input type="number" id="teamCount" min="1" value="2">
+        </div>
+        <button type="button" id="generateTeams">Generate Teams</button>
+        <div id="generatedTeams"></div>
+        <button type="button" id="saveTeamsBtn">Save Teams</button>
+        <div id="teamMessage"></div>
+      </div>
+      
+      <!-- Player Assignment Section -->
+      <div id="playerAssignment" style="display:none; margin-top:1rem;">
+        <h3>Player Assignment</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Assign to Team</th>
+            </tr>
+          </thead>
+          <tbody id="playerAssignmentBody"></tbody>
+        </table>
+        <button id="savePlayerAssignments">Save Player Assignments</button>
+        <div id="playerAssignmentMessage"></div>
+      </div>
+      
+      <!-- Score Entry Section -->
+      <div id="scoreEntry" style="display:none; margin-top:1rem;">
+        <h3>Enter Scores for Current Round</h3>
+        <form id="scoreForm">
+          <div id="scoreInputs"></div>
+          <button type="submit">Submit Scores</button>
+        </form>
+        <div id="scoreMessage"></div>
+      </div>
+      
+      <!-- End Game Button -->
+      <button id="endGame" style="margin-top:1rem;">End Game</button>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

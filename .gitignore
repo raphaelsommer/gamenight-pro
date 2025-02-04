@@ -1,29 +1,22 @@
-# Node.js dependencies
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Node (if using any frontend tooling)
 node_modules/
 
-# Production build output
-/dist/
+# PHP Sensitive/Temporary Files
+config.php
+*.log
+logs/
 
-/public/js/app.js
+# Temporary/Cache Files
+tmp/
+cache/
 
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# OS-specific files
-.DS_Store
-
-# Editor directories and files
-.idea/
+# IDE and Editor Directories/Files
 .vscode/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.idea/
+
+# System Swap Files
+*.swp

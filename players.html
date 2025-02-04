@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Players Management</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="create_game.html" class="nav-link">Create Game</a>
+    <a href="players.html" class="nav-link">Players</a>
+    <a href="scoreboard.html" class="nav-link">Scoreboard</a>
+  </nav>
+  <div class="container">
+    <h2>Players Management</h2>
+    <button id="newPlayerBtn">Add New Player</button>
+    <div id="playerFormContainer" style="display:none;">
+      <h3 id="playerFormTitle">New Player</h3>
+      <form id="playerForm">
+        <input type="hidden" name="player_id" id="player_id">
+        <div class="form-group">
+          <label for="playerName">Name:</label>
+          <input type="text" name="name" id="playerName" required>
+        </div>
+        <div class="form-group">
+          <label for="playerEmail">Email:</label>
+          <input type="email" name="email" id="playerEmail">
+        </div>
+        <button type="submit">Save Player</button>
+      </form>
+      <div id="playerFormMessage"></div>
+    </div>
+    <table id="playersTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Players will be loaded here -->
+      </tbody>
+    </table>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

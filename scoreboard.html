@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scoreboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="create_game.html" class="nav-link">Create Game</a>
+    <a href="players.html" class="nav-link">Players</a>
+    <a href="scoreboard.html" class="nav-link">Scoreboard</a>
+  </nav>
+  <div class="container">
+    <h2>Global Top 10 Players</h2>
+    <div id="topPlayers"></div>
+    <hr>
+    <h2>Scoreboard by Game Session</h2>
+    <div class="form-group">
+      <label for="gameSessionSelect">Select Game Session</label>
+      <select id="gameSessionSelect"></select>
+    </div>
+    <div id="scoreboardDisplay"></div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
