@@ -6,6 +6,12 @@ let currentRoundId = null;
 let currentTeams = []; // Array of { team_id, name }
 let currentRoundNumber = 0;
 
+// Helper function to check the password. CHANGE IN PRODUCTION ENVIRONMENT
+function checkPassword() {
+  const password = prompt("Please enter the password:");
+  return password === "test1234"; // Replace with your password.
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Set default game date
   const gameDateInput = document.getElementById('gameDate');
@@ -78,6 +84,10 @@ function populateGameTypes() {
 }
 
 function createGame(event) {
+  if (!checkPassword()) {
+    alert("Incorrect password!");
+    return;
+  }
   event.preventDefault();
   const form = event.target;
   const gameTypeId = form.game_type_id.value;
@@ -329,6 +339,10 @@ function loadPlayers() {
 }
 
 function showPlayerForm() {
+  if (!checkPassword()) {
+    alert("Incorrect password!");
+    return;
+  }
   document.getElementById('playerFormContainer').style.display = 'block';
   document.getElementById('playerFormTitle').textContent = 'New Player';
   document.getElementById('player_id').value = '';
@@ -364,6 +378,10 @@ function savePlayer(event) {
 }
 
 function editPlayer(playerId) {
+  if (!checkPassword()) {
+    alert("Incorrect password!");
+    return;
+  }
   fetch(`api/players.php?player_id=${playerId}`)
     .then(response => response.json())
     .then(player => {
@@ -377,6 +395,10 @@ function editPlayer(playerId) {
 }
 
 function deletePlayer(playerId) {
+  if (!checkPassword()) {
+    alert("Incorrect password!");
+    return;
+  }
   if (!confirm('Are you sure you want to delete this player?')) return;
   fetch(`api/players.php?player_id=${playerId}`, {
     method: 'DELETE'
