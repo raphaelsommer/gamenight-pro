@@ -9,8 +9,8 @@
 <body>
   <nav>
     <a href="index.html" class="nav-link">Home</a>
-    <a href="create_game.html" class="nav-link">Create Game</a>
-    <a href="players.html" class="nav-link">Players</a>
+    <a href="create_game.html" class="nav-link">Play a Game</a>
+    <a href="players.html" class="nav-link">Player Management</a>
     <a href="scoreboard.html" class="nav-link">Scoreboard</a>
   </nav>
   <div class="container">
@@ -35,14 +35,8 @@
     <!-- Round Management Section -->
     <div id="roundSection" style="display:none; margin-top:2rem;">
       
-      <!-- Round Indicator -->
-      <div id="roundIndicator" style="font-weight:bold; margin-bottom:1rem;"></div>
-      
-      <!-- Start New Round -->
-      <button id="startRound">Start New Round</button>
-      
       <!-- Team Setup Section -->
-      <div id="teamSetup" style="display:none; margin-top:1rem;">
+      <!-- <div id="teamSetup" style="display:none; margin-top:1rem;">
         <h3>Team Setup</h3>
         <div class="form-group">
           <label for="teamCount">Number of Teams:</label>
@@ -50,12 +44,10 @@
         </div>
         <button type="button" id="generateTeams">Generate Teams</button>
         <div id="generatedTeams"></div>
-        <button type="button" id="saveTeamsBtn">Save Teams</button>
-        <div id="teamMessage"></div>
-      </div>
+      </div> -->
       
       <!-- Player Assignment Section -->
-      <div id="playerAssignment" style="display:none; margin-top:1rem;">
+      <!--<div id="playerAssignment" style="display:none; margin-top:1rem;">
         <h3>Player Assignment</h3>
         <table>
           <thead>
@@ -68,7 +60,32 @@
         </table>
         <button id="savePlayerAssignments">Save Player Assignments</button>
         <div id="playerAssignmentMessage"></div>
+        <button type="button" id="saveTeamsBtn">Save Teams</button>
+        <div id="teamMessage"></div>
+      </div> -->
+
+      <!-- Team Setup Section with integrated player assignment -->
+      <div id="teamSetup" style="display:none; margin-top:1rem;">
+        <h3>Team Setup</h3>
+        <div class="form-group">
+          <label for="teamCount">Number of Teams:</label>
+          <input type="number" id="teamCount" min="1" value="2">
+        </div>
+        <button type="button" id="generateTeams">Generate Teams</button>
+        <!-- Container for generated team rows with multi-selects -->
+        <div id="teamsAssignmentContainer"></div>
+        <button type="button" id="savePlayerAssignments">Save Player Assignments</button>
+        <div id="playerAssignmentMessage"></div>
+        <!-- Finally, save the teams (with updated names) to start the round -->
+        <button type="button" id="saveTeamsBtn">Save Teams</button>
+        <div id="teamMessage"></div>
       </div>
+
+      <!-- Round Indicator -->
+      <div id="roundIndicator" style="font-weight:bold; margin-bottom:1rem;"></div>
+      
+      <!-- Start New Round -->
+      <!-- <button id="startRound">Start New Round</button> -->
       
       <!-- Score Entry Section -->
       <div id="scoreEntry" style="display:none; margin-top:1rem;">

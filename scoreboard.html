@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Scoreboard</title>
+  <title>Scoreboard - GameNight</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
@@ -16,14 +16,20 @@
   <div class="container">
     <h2>Global Top 10 Players</h2>
     <div id="topPlayers"></div>
-    <hr>
-    <h2>Scoreboard by Game Session</h2>
+    
+    <h2>Game Session KPIs</h2>
     <div class="form-group">
-      <label for="gameSessionSelect">Select Game Session</label>
+      <label for="gameSessionSelect">Select Game Session:</label>
       <select id="gameSessionSelect"></select>
     </div>
-    <div id="scoreboardDisplay"></div>
+    <div id="sessionKPIs"></div>
+
+    <h2>Detailed Round Scores</h2>
+    <div id="detailedScores"></div>
+    
+    <h2>Best Team Combinations</h2>
+    <div id="bestTeam"></div>
   </div>
-  <script src="js/main.js"></script>
+  <script src="js/calculations.js"></script>
 </body>
 </html>
